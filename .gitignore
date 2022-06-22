@@ -1,0 +1,5 @@
+node_modules/
+
+# DataFile Store
+dataExcelFile/
+dataJsonFile/

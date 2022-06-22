@@ -1,0 +1,45 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "script": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "barcode-js": "^13.8.3085",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "file-extension": "^4.0.5",
+    "http-errors": "~1.6.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.3",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.4",
+    "uuid": "^8.3.2",
+    "validator": "^13.7.0",
+    "xls-to-json": "^2.1.0",
+    "xlsx": "^0.18.5",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
+  }
+}
