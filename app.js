@@ -5,7 +5,7 @@ var logger = require('morgan');
 const axios = require('axios');
 const dotenv = require('dotenv').config();
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
 
 // //////////////////////////////////////////////////////////////////////
 const mongoose = require('mongoose');
@@ -19,10 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('./public/images'));
-app.use('/jsonfile', indexRouter);
-app.use('/user', usersRouter);
+app.use('/api', indexRouter);
+// app.use('/user', usersRouter);
 
-app.get('/test/url', async (req, res, next) => {
+app.get('/redirect/sap-url', async (req, res, next) => {
   try {
     axios
       .get('https://api.cf.us10.hana.ondemand.com')

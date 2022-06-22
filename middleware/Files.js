@@ -13,6 +13,19 @@ const storage = multer.diskStorage({
   },
 });
 
-module.exports.upload = multer({
-  storage: storage,
-}).single('file');
+module.exports.upload = (destination = './public/dataJsonFile') => {
+  const storage = multer.diskStorage({
+    destination,
+    filename: (req, file, cb) => {
+      crypto.pseudoRandomBytes(16, function (err, raw) {
+        cb(
+          null,
+          raw.toString('hex') + Date.now() + '.' + fileExtension(file.mimetype)
+        );
+      });
+    },
+  });
+  return multer({
+    storage: storage,
+  }).single('file');
+};
